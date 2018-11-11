@@ -492,7 +492,7 @@ hr {
     float: right;
     width: 100px;
     max-width: 110px;
-    color: rgba(0,0,0,.5);
+    color: rgba(255,255,255,.5);
     background-color: inherit;
     border: 1px darkgray solid;
     font-weight: 600;
@@ -504,12 +504,11 @@ hr {
     border: 1px darkgray solid;
 }
 
-#move-top:hover, #navMenuToggleIcon:hover {
-    background-color: darkgray;
-    color: black;
-    border: 1px rgba(0,0,0,1.0) solid;
-    border-radius: 4px;
-}
+    #move-top:hover, #navMenuToggleIcon:hover {
+        color: white;
+        border: 1px rgba(255,255,255,1.0) solid;
+        border-radius: 4px;
+    }
 
 #navbarSupportedContent {
     position: fixed;
@@ -533,7 +532,7 @@ hr {
 .navbar {
     color: inherit;
     padding: 7px 7px;
-    border: 1px darkgray solid;
+    border: 1px #343a40 solid;
 }
 
 .navbar-nav {
@@ -546,23 +545,32 @@ hr {
     padding-right: 0.15rem;
     width: 45px;
     max-width: 45px;
+    height: 40px;
 }
 
 .nav-item {
     padding-left: 10px;
     padding-right: 10px;
-    border: 1px darkgray solid;
+    border: 1px #343a40 solid;
+    color: white;
+    opacity: 0.5;
 }
 
     .nav-item:hover {
-        background-color: darkgray;
-        color: black;
-        border: 1px rgba(0,0,0,1.0) solid;
+        /*background-color: darkgray;*/
+        color: white;
+        opacity: 1.0;
+        border: 1px white solid;
         border-radius: 4px;
     }
 
 .navbar, #navbarSupportedContent {
-    background-color: lightgray;
+    background-color: #343a40;
+}
+
+
+.navbar-dark .navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 @media (min-width: 768px) {
