@@ -23,12 +23,6 @@ function createSkillBar() {
 $(document).ready(function () {
     createSkillBar();
     checkReturnToTop();
-    //$("#navbarSupportedContent").on("show.bs.collapse", function () {
-    //    $("#navMenuToggleIcon").addClass("d-none");
-    //});
-    //$("#navbarSupportedContent").on("hide.bs.collapse", function () {
-    //    $("#navMenuToggleIcon").removeClass("d-none");
-    //});
 });
 
 
@@ -49,12 +43,7 @@ function moveToElement(goToElementName) {
     var currentTopValue = document.scrollingElement.scrollTop;
     var navMenuHeight = $("#navmenuwrap").children().css("height");
     offset = offset.top - parseFloat(navMenuHeight.substring(0, navMenuHeight.lastIndexOf("px")));
-    if (Math.abs(currentTopValue - offset) < 100) {
-        $('html, body').animate({ scrollTop: offset }, 10000);
-    }
-    else {
-        $('html, body').animate({ scrollTop: offset }, 1000);
-    }
+    $('html, body').animate({ scrollTop: offset }, 1000);
     $("#navbarSupportedContent").children().find('.active').removeClass('active');
     $(elementId).addClass('active');
     if (elementId == "#tooltech") {
