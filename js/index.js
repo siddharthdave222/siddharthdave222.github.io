@@ -97,14 +97,19 @@ function checkReturnToTop() {
     }
 }
 
-document.addEventListener('scroll', function () {
-    checkReturnToTop();
-});
-
-document.addEventListener('click', function () {
+function isNavBarOpen() {
     var clickover = $(event.target);
     var _opened = $(".navbar-collapse").hasClass("show");
     if (_opened === true && !clickover.hasClass("navbar-toggle")) {
         $("#navMenuToggleIcon").click();
     }
+}
+
+document.addEventListener('scroll', function () {
+    checkReturnToTop();
+    isNavBarOpen();
+});
+
+document.addEventListener('click', function () {
+    isNavBarOpen();
 });
