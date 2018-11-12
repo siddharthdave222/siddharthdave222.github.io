@@ -64,11 +64,6 @@ hr {
     padding: 0;
 }
 
-.valueBox {
-    min-width: 50%;
-    width: auto;
-}
-
 .labelBox {
     padding-top: 2%;
 }
@@ -102,6 +97,11 @@ hr {
     width: 100%;
 }
 
+#headerwrap, #workexcertwrap, #toolwrap, #acadwrap, #aboutwrap {
+    min-height: 730px;
+    width: 100%;
+}
+
 #headerwrap {
     background: url(../img/header-bg.jpg) no-repeat center top;
     padding-top: 265px;
@@ -115,8 +115,6 @@ hr {
     background-color: #bcdcd3;
     padding-top: 10px;
     padding-bottom: 10px;
-    min-height: 310px;
-    width: 100%;
     background-size: cover;
 }
 
@@ -129,8 +127,6 @@ hr {
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
-    min-height: 250px;
-    width: 100%;
     background-size: cover;
 }
 
@@ -157,7 +153,7 @@ hr {
     }
 
 #acadwrap {
-    background: url(../img/mint.jpg) repeat center top;
+    background-color: darkgray;
     color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -180,8 +176,6 @@ hr {
 #aboutwrap {
     overflow: auto;
     text-align: center;
-    width: 100%;
-    min-height: 730px;
 }
 
     #aboutwrap p {
@@ -189,7 +183,7 @@ hr {
         font-size: 20px;
     }
 
-    #aboutwrap h1, h2, h3 {
+    #aboutwrap h1, h2, h3, #workex h1, h2, h3, #certifications h1, h2, h3, #toolwrap h1, h2, h3 {
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -276,178 +270,20 @@ hr {
     padding-bottom: 15px;
 }
 
-.centered {
-    text-align: center;
-}
-
-.grid figure {
-    margin: 0;
-    position: relative;
-}
-
-    .grid figure img {
-        width: 100%;
-        display: block;
-        position: relative;
-    }
-
-.grid figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    color: #fff;
-    background-color: #1abc9c;
-}
-
-    .grid figcaption h5 {
-        margin: 0;
-        padding-top: 0;
-        padding-left: 20px;
-        padding-bottom: 5px;
-        color: #fff;
-        background-color: transparent;
-        font-weight: 700;
-        text-align: left;
-        letter-spacing: 2px;
-    }
-
-    .grid figcaption a {
-        text-align: left;
-        padding: 5px 10px;
-        margin-left: 20px;
-        display: inline-block;
-        background-color: #2f2f2f;
-        color: #fff;
-        font-size: 13px;
-    }
-
-.mask figure {
-    overflow: hidden;
-}
-
-    .mask figure img {
-        transition: transform .4s;
-    }
-
-    .no-touch .mask figure:hover img,
-    .mask figure.cs-hover img {
-        transform: translateY(-30px);
-    }
-
-.mask figcaption {
-    height: 50px;
-    width: 100%;
-    top: auto;
-    bottom: 0;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: transform .4s, opacity .1s .3s;
-}
-
-.no-touch .mask figure:hover figcaption,
-.mask figure.cs-hover figcaption {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: transform .4s, opacity .1s;
-}
-
-.mask figcaption a {
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    right: 30px;
-}
-
-.accordion-heading {
-    margin-top: 30px;
-    padding-bottom: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ccc;
-}
-
-.accordion-inner h4 {
-    font-family: Lato, sans-serif;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 25px;
-}
-
-.accordion-heading plus {
-    font-size: 30px;
-    font-weight: 700;
-    color: #1abc9c;
-    background-color: transparent;
-    font-family: Raleway, sans-serif;
-    vertical-align: middle;
-}
-
-.accordion-heading date {
-    background-color: #2f2f2f;
-    color: #fff;
-    font-family: Lato, sans-serif;
-    font-size: 14px;
-    padding: 8px;
-}
-
-.accordion-heading a {
-    font-family: Raleway, sans-serif;
-    font-size: 22px;
-    color: #333;
-    background-color: transparent;
-}
-
-.accordion-heading a:hover {
-    font-family: Raleway, sans-serif;
-    font-size: 22px;
-    color: #1abc9c;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-.form-control {
-    padding: 20px;
-    font-family: Lato, sans-serif;
-    font-size: 16px;
-}
-
-.form-group label {
-    font-family: Raleway,sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.btn-theme {
-    color: #fff;
-    background-color: #1abc9c;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-weight: 700;
-    border-radius: 3px;
-}
-
-.btn-theme:hover {
-    cursor: pointer;
-    color: #fff;
-    background-color: #16a085;
-}
-
 .btn-clickable {
     cursor: pointer;
     border: 1px solid white;
     border-radius: 10px;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: inline-block;
     box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 1), inset -1px -1px -1px rgba(0, 0, 0, 1);
     background-color: #468674;
     width: 100%;
-    min-height: 60px;
+    min-height: 100px;
 }
 
 .btn-clickable:hover {
@@ -462,19 +298,9 @@ hr {
     background-color: #468674;
 }
 
-#academics, #projects, #certifications, #workex {
+#academics, #projects, #certifications, #workex, #aboutwrap {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.table-responsive > .table > thead > tr > th,
-.table-responsive > .table > tbody > tr > th,
-.table-responsive > .table > tfoot > tr > th,
-.table-responsive > .table > thead > tr > td,
-.table-responsive > .table > tbody > tr > td,
-.table-responsive > .table > tfoot > tr > td {
-    white-space: normal;
-    vertical-align: middle;
 }
 
 .img-profile {
