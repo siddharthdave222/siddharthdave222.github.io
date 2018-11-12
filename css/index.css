@@ -113,7 +113,7 @@ hr {
 
 #workexcertwrap {
     background-color: #bcdcd3;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
     background-size: cover;
 }
@@ -176,6 +176,8 @@ hr {
 #aboutwrap {
     overflow: auto;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
     #aboutwrap p {
@@ -183,14 +185,28 @@ hr {
         font-size: 20px;
     }
 
-    #aboutwrap h1, h2, h3, #workex h1, h2, h3, #certifications h1, h2, h3, #toolwrap h1, h2, h3 {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
 #contactwrap {
     min-height: 100px;
 }
+
+#aboutwrap h1, h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#certifications h1, h2, h3, #toolwrap h1, h2, h3, #projects h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#academics {
+    margin-top: 10px;
+}
+
+#projects, #certifications {
+    padding-bottom: 30px;
+}
+
 
 .intro {
     opacity: 0.7;
@@ -298,11 +314,8 @@ hr {
     background-color: #468674;
 }
 
-#academics, #projects, #certifications, #workex, #aboutwrap {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
+    
 .img-profile {
     width: 70%;
     margin-left: auto;
@@ -384,7 +397,6 @@ hr {
 }
 
     .nav-item:hover {
-        /*background-color: darkgray;*/
         color: white;
         opacity: 1.0;
         border: 1px white solid;
