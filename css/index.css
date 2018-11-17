@@ -1,5 +1,5 @@
 body {
-    background-color: #f2f2f2;
+    background-color: lightgray;
     font-family: Lato, sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -119,11 +119,13 @@ hr {
 }
 
 #workexcertwrap h4 {
-    color: #fff;
+    color: black;
+    opacity: 0.6;
+    font-size: larger;
 }
 
 #toolwrap {
-    background-color: #bcdcd3;
+    background-color: white;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
@@ -153,7 +155,7 @@ hr {
     }
 
 #acadwrap {
-    background-color: darkgray;
+    background-color: lightgray;
     color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -161,7 +163,9 @@ hr {
 }
 
     #acadwrap h4 {
-        color: #fff;
+        color: black;
+        opacity: 0.6;
+        font-size: larger;
     }
 
     #acadwrap .skill-icon {
@@ -176,6 +180,8 @@ hr {
 #aboutwrap {
     overflow: auto;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: lightgray;
 }
 
@@ -248,7 +254,7 @@ hr {
 }
 
 .skill-percent {
-    background-color: #468674;
+    background-color: lightgray;
     height: 25px;
     width: 5%;
 }
@@ -296,24 +302,34 @@ hr {
     margin-bottom: 10px;
     display: inline-block;
     box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 1), inset -1px -1px -1px rgba(0, 0, 0, 1);
-    background-color: #468674;
+    background-color: lightgray;
     width: 100%;
     min-height: 100px;
 }
 
-.btn-clickable:hover {
-    cursor: pointer;
-    z-index: 50;
-    transform: scale(1.05, 1.05);
-    background-color: #468674;
-    position: relative;
+    .btn-clickable:hover {
+        cursor: pointer;
+        z-index: 50;
+        transform: scale(1.05, 1.05);
+        background-color: lightgray;
+        position: relative;
+    }
+
+    .btn-clickable:focus {
+        background-color: lightgray;
+    }
+
+#acadwrap .btn-clickable {
+    background-color: white;
 }
 
-.btn-clickable:focus {
-    background-color: #468674;
-}
+    #acadwrap .btn-clickable:hover {
+        background-color: white;
+    }
 
-
+    #acadwrap .btn-clickable:focus {
+        background-color: white;
+    }
 
 .img-profile {
     width: 70%;

@@ -13,7 +13,7 @@ function createSkillBar() {
         element.animate({
             width: percentValue
         }, 750, function () {
-            var elementHTML = "<span style='color:white; font-size:75%;'>" + percentValue + "</span>"
+            var elementHTML = "<span style='color:black; font-size:110%;'>" + percentValue + "</span>"
             element.html(elementHTML);
         });
 
