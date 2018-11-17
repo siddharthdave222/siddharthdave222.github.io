@@ -112,7 +112,7 @@ hr {
 }
 
 #workexcertwrap {
-    background-color: #bcdcd3;
+    background-color: white;
     padding-top: 20px;
     padding-bottom: 10px;
     background-size: cover;
@@ -176,8 +176,7 @@ hr {
 #aboutwrap {
     overflow: auto;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    background-color: lightgray;
 }
 
     #aboutwrap p {
