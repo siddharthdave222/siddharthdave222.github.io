@@ -113,3 +113,7 @@ document.addEventListener('scroll', function () {
 document.addEventListener('click', function () {
     isNavBarOpen();
 });
+
+$("#toolwrap").addEventListener("touchmove", function () {
+    createSkillBar();
+});
