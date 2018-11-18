@@ -1,5 +1,5 @@
 body {
-    background-color: lightgray;
+    background-color: lightblue;
     font-family: Lato, sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -155,7 +155,7 @@ hr {
     }
 
 #acadwrap {
-    background-color: lightgray;
+    background-color: lightblue;
     color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -182,7 +182,7 @@ hr {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: lightgray;
+    background-color: lightblue;
 }
 
     #aboutwrap p {
@@ -254,7 +254,7 @@ hr {
 }
 
 .skill-percent {
-    background-color: lightgray;
+    background-color: lightblue;
     height: 25px;
     width: 5%;
 }
@@ -302,7 +302,7 @@ hr {
     margin-bottom: 10px;
     display: inline-block;
     box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 1), inset -1px -1px -1px rgba(0, 0, 0, 1);
-    background-color: lightgray;
+    background-color: lightblue;
     width: 100%;
     min-height: 100px;
 }
@@ -311,12 +311,12 @@ hr {
         cursor: pointer;
         z-index: 50;
         transform: scale(1.05, 1.05);
-        background-color: lightgray;
+        background-color: lightblue;
         position: relative;
     }
 
     .btn-clickable:focus {
-        background-color: lightgray;
+        background-color: lightblue;
     }
 
 #acadwrap .btn-clickable {
@@ -388,6 +388,7 @@ hr {
     color: inherit;
     padding: 7px 7px;
     border: 1px #343a40 solid;
+    background-color: #50433B !important;
 }
 
 .navbar-nav {
@@ -419,7 +420,7 @@ hr {
     }
 
 .navbar, #navbarSupportedContent {
-    background-color: #343a40;
+    background-color: #50433B;
 }
 
 
@@ -428,8 +429,7 @@ hr {
 }
 
 .nav-item i {
-    padding-left: 5px;
-    padding-right: 10px;
+    margin-right: 5px;
 }
 
 @media (min-width: 768px) {
