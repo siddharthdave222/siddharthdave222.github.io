@@ -15,7 +15,7 @@ h5,
 h6 {
     font-family: Raleway, sans-serif;
     font-weight: 300;
-    color: #333;
+    color: #50433B;
     background-color: transparent;
 }
 
@@ -29,7 +29,7 @@ p {
 }
 
 a {
-    color: #3bc492;
+    color: #50433B;
     background-color: transparent;
     word-wrap: break-word;
     transition: color .1s ease-in, background .1s ease-in;
@@ -69,14 +69,14 @@ hr {
 }
 
 .modal-header {
-    background-color: #1abc9c;
+    background-color: #50433B;
     color: #fff;
-    margin-right: -0.5px;
 }
 
 .modal-title {
-    color: #000;
+    opacity: 0.5;
     background-color: transparent;
+    font-weight: bold;
 }
 
 .modal-header .modal-title {
@@ -84,8 +84,9 @@ hr {
     margin-right: auto;
 }
 
-.modal-header .close {
-    margin-left: 0;
+.modal-header .fas {
+    opacity: 0.5;
+    padding: 5px;
 }
 
 .modal-footer {
@@ -296,8 +297,7 @@ hr {
     border: 1px solid white;
     border-radius: 10px;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     display: inline-block;
