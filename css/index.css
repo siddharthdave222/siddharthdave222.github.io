@@ -380,7 +380,7 @@ hr {
 
 #navbarSupportedContent {
     position: fixed;
-    top: 56px;
+    top: 66px;
     left: 0;
     z-index: 1030;
     padding-left: 0;
@@ -402,6 +402,24 @@ hr {
     padding: 7px 7px;
     border: 1px #343a40 solid;
     background-color: #50433B !important;
+}
+
+.navbar-buttons {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-progressbar {
+    margin-top: 5px;
+    min-height: 5px;
+    height: 5px;
+    background-color: white;
+    opacity: 0.5;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s cubic-bezier(0, 0, 0, 1);
+    min-width: 0%;
+    max-width: 100%;
 }
 
 .navbar-nav {

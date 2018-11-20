@@ -47,6 +47,14 @@ function createSkillBar() {
     });
 }
 
+function updateProgressBar() {
+    var maxHeight = document.body.clientHeight - screen.height
+    var currentTopValue = document.scrollingElement.scrollTop;
+    var element = $('.navbar-progressbar');
+    var percentValue = currentTopValue >= maxHeight ? "100%" : ((currentTopValue / maxHeight) * 100) + "%";
+    element.css("width", percentValue);
+}
+
 $(document).ready(function () {
     createSkillBar();
     checkReturnToTop();
@@ -68,9 +76,8 @@ function checkNullUndefinedOrEmpty(value) {
 function moveToElement(goToElementName) {
     var elementId = "#" + goToElementName;
     var offset = $(elementId).offset();
-    var currentTopValue = document.scrollingElement.scrollTop;
-    var navMenuHeight = $("#navmenuwrap").children().css("height");
-    offset = offset.top - parseFloat(navMenuHeight.substring(0, navMenuHeight.lastIndexOf("px")));
+    var navMenuHeight = $(".navbar").css("height");
+    offset = offset.top - parseFloat(navMenuHeight.substring(0, navMenuHeight.lastIndexOf("px"))) + 1;
     $('html, body').animate({ scrollTop: offset }, 1000);
     $("#navbarSupportedContent").children().find('.active').removeClass('active');
     $(elementId).addClass('active');
@@ -136,6 +143,7 @@ function isNavBarOpen() {
 document.addEventListener('scroll', function () {
     checkReturnToTop();
     isNavBarOpen();
+    updateProgressBar();
 });
 
 document.addEventListener('click', function () {
