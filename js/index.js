@@ -43,7 +43,6 @@ function createSkillBar() {
             var elementHTML = "<span style='color:#50433B; font-size:110%;'>" + percentValue + "</span>"
             element.html(elementHTML);
         });
-
     });
 }
 
@@ -59,6 +58,7 @@ $(document).ready(function () {
     createSkillBar();
     checkReturnToTop();
     typeWriter();
+    updateProgressBar();
 });
 
 
