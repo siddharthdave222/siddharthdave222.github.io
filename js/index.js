@@ -8,7 +8,7 @@ var introDivCounter = 0;
 var introWordCounter = 0;
 var introWordSpeed = 500;
 var introWordText = "";
-var introDivText = ["Hola!", "Howdy!", "Hello!"];
+var introDivText = ["Hello!", "Hola!", "Howdy!"];
 
 function type() {
     if (introWordCounter < introWordText.length) {
@@ -50,6 +50,7 @@ function createSkillBar() {
 $(document).ready(function () {
     createSkillBar();
     checkReturnToTop();
+    typeWriter();
 });
 
 
@@ -141,4 +142,4 @@ document.addEventListener('click', function () {
     isNavBarOpen();
 });
 
-setInterval(typeWriter, 10000);
+setInterval(typeWriter, 5000);

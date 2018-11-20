@@ -437,6 +437,7 @@ hr {
     font-weight: bold;
     margin-top: 1%;
     margin-bottom: 1%;
+    height: 75px;
 }
 
 @media (min-width: 768px) {
