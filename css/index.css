@@ -87,6 +87,14 @@ hr {
 .modal-header .fas {
     opacity: 0.5;
     padding: 5px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.modal-header .fas:hover {
+    transition: 1s;
+    transform: rotateZ(180deg);
+    opacity: 1.0;
 }
 
 .modal-footer {
@@ -341,6 +349,11 @@ hr {
 .btn-default {
     background-color: #fff;
     border: 1px #ccc solid;
+}
+
+.btn-default:hover {
+    background-color: #50433B;
+    color: white;
 }
 
 #move-top {
