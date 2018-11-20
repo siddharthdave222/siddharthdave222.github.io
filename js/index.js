@@ -10,6 +10,7 @@ var introWordSpeed = 500;
 var introWordText = "";
 var introDivText = ["Hello!", "Hola!", "Howdy!"];
 
+
 function type() {
     if (introWordCounter < introWordText.length) {
         document.getElementById("typeWriterIntro").innerHTML += introWordText.charAt(introWordCounter);
@@ -56,10 +57,6 @@ $(document).ready(function () {
 
 toolDiv.mouseenter(function () {
     createSkillBar();
-});
-
-introDiv.mouseenter(function () {
-    typeWriter();
 });
 
 function checkNullUndefinedOrEmpty(value) {
@@ -145,3 +142,5 @@ document.addEventListener('scroll', function () {
 document.addEventListener('click', function () {
     isNavBarOpen();
 });
+
+setInterval(typeWriter, 10000);
