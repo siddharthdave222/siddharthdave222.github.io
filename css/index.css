@@ -402,6 +402,7 @@ hr {
     padding: 7px 7px;
     border: 1px #343a40 solid;
     background-color: #50433B !important;
+    min-height:66px;
 }
 
 .navbar-buttons {
