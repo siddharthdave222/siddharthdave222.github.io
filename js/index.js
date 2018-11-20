@@ -3,6 +3,33 @@
 //})
 
 var toolDiv = $("#toolwrap");
+var introDiv = $("#aboutwrap");
+var introDivCounter = 0;
+var introWordCounter = 0;
+var introWordSpeed = 500;
+var introWordText = "";
+var introDivText = ["Hello!", "Hola!", "Howdy!"];
+
+function type() {
+    if (introWordCounter < introWordText.length) {
+        document.getElementById("typeWriterIntro").innerHTML += introWordText.charAt(introWordCounter);
+        introWordCounter++;
+        setTimeout(type, introWordSpeed);
+    }
+}
+
+function typeWriter() {
+    introWordCounter = 0;
+    introWordText = introDivText[introDivCounter];
+    document.getElementById("typeWriterIntro").innerHTML = "";
+    type();
+    if (introDivCounter < introDivText.length - 1) {
+        introDivCounter++;
+    }
+    else {
+        introDivCounter = 0;
+    }
+}
 
 function createSkillBar() {
     $('.skill-bar').each(function () {
@@ -23,11 +50,16 @@ function createSkillBar() {
 $(document).ready(function () {
     createSkillBar();
     checkReturnToTop();
+    typeWriter();
 });
 
 
 toolDiv.mouseenter(function () {
     createSkillBar();
+});
+
+introDiv.mouseenter(function () {
+    typeWriter();
 });
 
 function checkNullUndefinedOrEmpty(value) {
