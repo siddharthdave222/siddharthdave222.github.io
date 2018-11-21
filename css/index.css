@@ -127,11 +127,10 @@ hr {
     background-size: cover;
 }
 
-#workexcertwrap h4 {
-    color: black;
-    opacity: 0.6;
-    font-size: larger;
-}
+    #workexcertwrap h4 {
+        color: #555;
+        font-weight: bold;
+    }
 
 #toolwrap {
     background-color: white;
@@ -165,16 +164,14 @@ hr {
 
 #acadwrap {
     background-color: lightblue;
-    color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: left;
 }
 
     #acadwrap h4 {
-        color: black;
-        opacity: 0.6;
-        font-size: larger;
+        color: #555;
+        font-weight: bold;
     }
 
     #acadwrap .skill-icon {
@@ -465,11 +462,14 @@ hr {
 }
 
 #typeWriterIntro {
-    font-size: 50px;
-    font-weight: bold;
     margin-top: 1%;
     margin-bottom: 1%;
     height: 75px;
+}
+
+.header-text {
+    font-size: 40px;
+    font-weight: bold;
 }
 
 @media (min-width: 768px) {
