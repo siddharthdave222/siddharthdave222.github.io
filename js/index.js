@@ -2,6 +2,10 @@
 //    interval: 5000
 //})
 
+$(document).ready(function () {
+    $(".loader").fadeOut(800);
+});
+
 var toolDiv = $("#toolwrap");
 var introDivCounter = 0;
 var introWordCounter = 0;
@@ -150,3 +154,4 @@ document.addEventListener('click', function () {
 });
 
 setInterval(typeWriter, 5000);
+
