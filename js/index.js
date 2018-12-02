@@ -2,20 +2,18 @@
 //    interval: 5000
 //})
 
-$(document).ready(function () {
-    $(".loader").fadeOut(800);
-});
-
 var toolDiv = $("#toolwrap");
+var homeDiv = $("#headerwrap");
+var typeWriterIntroDiv = $("#typeWriterIntro");
 var introDivCounter = 0;
 var introWordCounter = 0;
 var introWordSpeed = 500;
 var introWordText = "";
-var introDivText = ["Hello!", "Hola!", "Howdy!"];
+var introDivText = ["Hello!", "Namaste!", "Hola!", "Howdy!", "Guten Tag!", "Bonjour!", "Olà!", "Merhaba!", "Ciao!"];
 
 function type() {
     if (introWordCounter < introWordText.length) {
-        document.getElementById("typeWriterIntro").innerHTML += introWordText.charAt(introWordCounter);
+        typeWriterIntroDiv.innerHTML += introWordText.charAt(introWordCounter);
         introWordCounter++;
         setTimeout(type, introWordSpeed);
     }
@@ -24,7 +22,7 @@ function type() {
 function typeWriter() {
     introWordCounter = 0;
     introWordText = introDivText[introDivCounter];
-    document.getElementById("typeWriterIntro").innerHTML = "";
+    typeWriterIntroDiv.innerHTML = "";
     type();
     if (introDivCounter < introDivText.length - 1) {
         introDivCounter++;
@@ -57,16 +55,39 @@ function updateProgressBar() {
     element.css("width", percentValue);
 }
 
+function apparatingLetters() {
+    var element = $(".apparateLetters");
+    for (var index = 0; index < element.length; index++)
+    {
+        var elementContent = element[index].innerText;
+        var html = "";
+        for (var index2 = 0; index2 < elementContent.length; index2++) {
+            if (elementContent[index2] == " ") {
+                html += elementContent[index2];
+            }
+            else {
+                html += "<span>" + elementContent[index2] + "</span>";
+            }
+        }
+        element[index].innerHTML = html;
+    }
+}
+
 $(document).ready(function () {
+    $(".loader").fadeOut(800);
+    apparatingLetters();
     createSkillBar();
     checkReturnToTop();
     typeWriter();
     updateProgressBar();
 });
 
-
 toolDiv.mouseenter(function () {
     createSkillBar();
+});
+
+homeDiv.mouseenter(function () {
+
 });
 
 function checkNullUndefinedOrEmpty(value) {
@@ -154,4 +175,3 @@ document.addEventListener('click', function () {
 });
 
 setInterval(typeWriter, 5000);
-

@@ -264,7 +264,7 @@ hr {
     animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-direction: alternate;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 
 @keyframes borderBarChange {
@@ -503,6 +503,34 @@ hr {
     z-index: 9999;
     background: url('../img/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
     opacity: .8;
+}
+
+.apparateLetters span {
+    position: relative;
+    opacity: 0;
+    animation: animateOverlay 1s ease-in-out forwards;
+}
+
+    .apparateLetters span:nth-child(4n) {
+        animation-delay: 1s;
+    }
+
+    .apparateLetters span:nth-child(4n+1) {
+        animation-delay: 1.5s;
+    }
+
+    .apparateLetters span:nth-child(4n+3) {
+        animation-delay: 2s;
+    }
+
+    .apparateLetters span:nth-child(4n+2) {
+        animation-delay: 2.5s;
+    }
+
+@keyframes animateOverlay {
+    to {
+        opacity: 1;
+    }
 }
 
 @media (min-width: 768px) {
