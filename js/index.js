@@ -3,7 +3,6 @@
 //})
 
 var toolDiv = $("#toolwrap");
-var introDiv = $("#aboutwrap");
 var introDivCounter = 0;
 var introWordCounter = 0;
 var introWordSpeed = 500;

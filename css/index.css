@@ -226,7 +226,7 @@ hr {
     height: 100%;
     padding-top: 1%;
     padding-bottom: 1%;
-    min-height: 200px;
+    min-height: 180px;
 }
 
 .intro-name {
@@ -253,6 +253,27 @@ hr {
     width: 7%;
     display: inline;
     margin: 2%;
+}
+
+.border-bar {
+    height: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    animation-name: borderBarChange;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes borderBarChange {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: #50433B;
+    }
 }
 
 .skill-name {
