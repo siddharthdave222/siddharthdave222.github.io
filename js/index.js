@@ -3,7 +3,7 @@
 //})
 
 var toolDiv = $("#toolwrap");
-var homeDiv = $("#headerwrap");
+
 var typeWriterIntroDiv = $("#typeWriterIntro");
 var introDivCounter = 0;
 var introWordCounter = 0;
@@ -13,7 +13,7 @@ var introDivText = ["Hello!", "Namaste!", "Hola!", "Howdy!", "Guten Tag!", "Bonj
 
 function type() {
     if (introWordCounter < introWordText.length) {
-        typeWriterIntroDiv.innerHTML += introWordText.charAt(introWordCounter);
+        document.getElementById("typeWriterIntro").innerHTML += introWordText.charAt(introWordCounter);
         introWordCounter++;
         setTimeout(type, introWordSpeed);
     }
@@ -22,7 +22,7 @@ function type() {
 function typeWriter() {
     introWordCounter = 0;
     introWordText = introDivText[introDivCounter];
-    typeWriterIntroDiv.innerHTML = "";
+    document.getElementById("typeWriterIntro").innerHTML = "";
     type();
     if (introDivCounter < introDivText.length - 1) {
         introDivCounter++;
@@ -57,8 +57,7 @@ function updateProgressBar() {
 
 function apparatingLetters() {
     var element = $(".apparateLetters");
-    for (var index = 0; index < element.length; index++)
-    {
+    for (var index = 0; index < element.length; index++) {
         var elementContent = element[index].innerText;
         var html = "";
         for (var index2 = 0; index2 < elementContent.length; index2++) {
@@ -82,13 +81,14 @@ $(document).ready(function () {
     updateProgressBar();
 });
 
+
 toolDiv.mouseenter(function () {
     createSkillBar();
 });
 
-homeDiv.mouseenter(function () {
 
-});
+
+
 
 function checkNullUndefinedOrEmpty(value) {
     if (value == undefined || value == null || value == "") {
