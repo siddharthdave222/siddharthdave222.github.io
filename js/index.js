@@ -56,9 +56,12 @@ function updateProgressBar() {
 }
 
 function apparatingLetters() {
-    var element = $(".apparateLetters");
-    for (var index = 0; index < element.length; index++) {
-        var elementContent = element[index].innerText;
+    var elementArray = $(".apparateLetters");
+    elementArray.removeClass("invisible");
+    for (var index = 0; index < elementArray.length; index++) {
+        var element = elementArray[index];
+        //element.removeClass("invisible");
+        var elementContent = element.innerText;
         var html = "";
         for (var index2 = 0; index2 < elementContent.length; index2++) {
             if (elementContent[index2] == " ") {
@@ -68,7 +71,7 @@ function apparatingLetters() {
                 html += "<span>" + elementContent[index2] + "</span>";
             }
         }
-        element[index].innerHTML = html;
+        element.innerHTML = html;
     }
 }
 

@@ -506,7 +506,6 @@ hr {
 }
 
 .apparateLetters span {
-    position: relative;
     opacity: 0;
     animation: animateOverlay 1s ease-in-out forwards;
 }
