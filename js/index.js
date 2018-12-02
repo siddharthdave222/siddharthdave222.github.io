@@ -89,10 +89,6 @@ toolDiv.mouseenter(function () {
     createSkillBar();
 });
 
-
-
-
-
 function checkNullUndefinedOrEmpty(value) {
     if (value == undefined || value == null || value == "") {
         return true;
