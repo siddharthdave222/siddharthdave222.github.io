@@ -257,24 +257,17 @@ hr {
 
 .border-bar {
     height: 6px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
     background-color: transparent;
-    animation-name: borderBarChange;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-direction: alternate;
-    animation-delay: 1.5s;
+    transition: 1.5s cubic-bezier(0, 0, 0, 1);
+    min-width: 0%;
+    max-width: 95%;
 }
 
-@keyframes borderBarChange {
-    from {
-        background-color: transparent;
-    }
-
-    to {
-        background-color: #50433B;
-    }
+.border-bar.bottom {
+    float:right;
+    margin-bottom:6px;
 }
 
 .skill-name {
@@ -389,6 +382,8 @@ hr {
 
 #navMenuToggleIcon {
     border: 1px darkgray solid;
+    /*transition: 1s;
+    transform: rotateZ(0deg);*/
 }
 
     #move-top:hover, #navMenuToggleIcon:hover {
@@ -396,6 +391,11 @@ hr {
         border: 1px rgba(255,255,255,1.0) solid;
         border-radius: 4px;
     }
+
+    /*#navMenuToggleIcon:hover {
+        transition: 1s;
+        transform: rotateZ(180deg) scale(0.75, 0.75);
+    }*/
 
 #navbarSupportedContent {
     position: fixed;
@@ -511,19 +511,19 @@ hr {
 }
 
     .apparateLetters span:nth-child(4n) {
-        animation-delay: 1s;
+        animation-delay: 0.5s;
     }
 
     .apparateLetters span:nth-child(4n+1) {
-        animation-delay: 1.5s;
+        animation-delay: 1s;
     }
 
     .apparateLetters span:nth-child(4n+3) {
-        animation-delay: 2s;
+        animation-delay: 1.5s;
     }
 
     .apparateLetters span:nth-child(4n+2) {
-        animation-delay: 2.5s;
+        animation-delay: 2s;
     }
 
 @keyframes animateOverlay {

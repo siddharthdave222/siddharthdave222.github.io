@@ -3,7 +3,6 @@
 //})
 
 var toolDiv = $("#toolwrap");
-
 var typeWriterIntroDiv = $("#typeWriterIntro");
 var introDivCounter = 0;
 var introWordCounter = 0;
@@ -55,6 +54,30 @@ function updateProgressBar() {
     element.css("width", percentValue);
 }
 
+function fillIntroBar() {
+    var topBar = $('.border-bar.up');
+    var bottomBar = $('.border-bar.bottom');
+    var initialValue = "0%", finalValue = "100%";
+    topBar.css("background-color", "#50433B");
+    bottomBar.css("background-color", "#50433B");
+    topBar.css("width", initialValue);
+    bottomBar.css("width", initialValue);
+    topBar.css("width", finalValue);
+    bottomBar.css("width", finalValue);
+}
+
+function clearIntroBar() {
+    var topBar = $('.border-bar.up');
+    var bottomBar = $('.border-bar.bottom');
+    var initialValue = "100%", finalValue = "0%";
+    topBar.css("width", initialValue);
+    bottomBar.css("width", initialValue);
+    topBar.css("width", finalValue);
+    bottomBar.css("width", finalValue);
+    topBar.css("background-color", "transparent");
+    bottomBar.css("background-color", "transparent");
+}
+
 function apparatingLetters() {
     var elementArray = $(".apparateLetters");
     elementArray.removeClass("invisible");
@@ -76,17 +99,27 @@ function apparatingLetters() {
 }
 
 $(document).ready(function () {
-    $(".loader").fadeOut(800);
-    apparatingLetters();
-    createSkillBar();
-    checkReturnToTop();
-    typeWriter();
-    updateProgressBar();
+    $(".loader").fadeOut(800, function () {
+        apparatingLetters();
+        createSkillBar();
+        checkReturnToTop();
+        typeWriter();
+        updateProgressBar();
+        fillIntroBar();
+    });
 });
 
 
 toolDiv.mouseenter(function () {
     createSkillBar();
+});
+
+$(".intro").mouseenter(function () {
+    clearIntroBar();
+});
+
+$(".intro").mouseleave(function () {
+    fillIntroBar();
 });
 
 function checkNullUndefinedOrEmpty(value) {
@@ -173,4 +206,4 @@ document.addEventListener('click', function () {
     isNavBarOpen();
 });
 
-setInterval(typeWriter, 5000);
+setInterval(typeWriter, 6000);
