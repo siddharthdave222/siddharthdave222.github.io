@@ -510,20 +510,24 @@ hr {
     animation: animateOverlay 1s ease-in-out forwards;
 }
 
-    .apparateLetters span:nth-child(4n) {
+    .apparateLetters span:nth-child(5n+1) {
         animation-delay: 0.5s;
     }
 
-    .apparateLetters span:nth-child(4n+1) {
+    .apparateLetters span:nth-child(5n) {
         animation-delay: 1s;
     }
-
-    .apparateLetters span:nth-child(4n+3) {
+    
+    .apparateLetters span:nth-child(5n+2) {
         animation-delay: 1.5s;
     }
 
-    .apparateLetters span:nth-child(4n+2) {
+    .apparateLetters span:nth-child(5n+4) {
         animation-delay: 2s;
+    }
+
+    .apparateLetters span:nth-child(5n+3) {
+        animation-delay: 2.5s;
     }
 
 @keyframes animateOverlay {
