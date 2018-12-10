@@ -83,7 +83,6 @@ function apparatingLetters() {
     elementArray.removeClass("invisible");
     for (var index = 0; index < elementArray.length; index++) {
         var element = elementArray[index];
-        //element.removeClass("invisible");
         var elementContent = element.innerText;
         var html = "";
         for (var index2 = 0; index2 < elementContent.length; index2++) {
@@ -115,6 +114,10 @@ toolDiv.mouseenter(function () {
 });
 
 $(".intro").mouseenter(function () {
+    var el = $(".apparateLetters");
+    el.removeClass("apparateLetters").fadeOut(500, function () {
+        el.fadeIn(500).addClass("apparateLetters");
+    });
     clearIntroBar();
 });
 
