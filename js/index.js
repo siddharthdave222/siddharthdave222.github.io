@@ -97,6 +97,13 @@ function apparatingLetters() {
     }
 }
 
+function reanimateApparition() {
+    var el = $(".apparateLetters");
+    el.removeClass("apparateLetters").fadeOut(500, function () {
+        el.fadeIn(500).addClass("apparateLetters");
+    });
+}
+
 $(document).ready(function () {
     $(".loader").fadeOut(800, function () {
         apparatingLetters();
@@ -114,10 +121,7 @@ toolDiv.mouseenter(function () {
 });
 
 $(".intro").mouseenter(function () {
-    var el = $(".apparateLetters");
-    el.removeClass("apparateLetters").fadeOut(500, function () {
-        el.fadeIn(500).addClass("apparateLetters");
-    });
+    reanimateApparition();
     clearIntroBar();
 });
 
@@ -142,6 +146,9 @@ function moveToElement(goToElementName) {
     $(elementId).addClass('active');
     if (elementId == "#tooltech") {
         createSkillBar();
+    }
+    else if (elementId == "#home") {
+        reanimateApparition();
     }
     return false;
 };
