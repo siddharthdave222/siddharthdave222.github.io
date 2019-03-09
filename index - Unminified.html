@@ -32,7 +32,7 @@
             <nav class="navbar fixed-top navbar-dark bg-dark">
                 <div class="col-12 navbar-buttons">
                     <button class="navbar-toggler-icon navbar-toggler" type="button" id="navMenuToggleIcon" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
-                    <button class="btn" type="button" aria-expanded="false" aria-label="Move to Top" id="move-top" style="visibility:hidden" onclick="moveToElement('home')">
+                    <button class="btn" type="button" aria-expanded="false" aria-label="Move to Top" id="move-top" style="visibility:hidden" onclick="moveToElement('home'); reloadAnimations('home');">
                         Move to Top
                     </button>
                 </div>
@@ -45,7 +45,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item" id="homeLink">
-                        <a class="nav-link" onclick="moveToElement('home')">
+                        <a class="nav-link" onclick="moveToElement('home'); reloadAnimations('home');">
                             <i class="fas fa-home"></i>
                             <span class="nav-value">
                                 Home
@@ -53,7 +53,7 @@
                         </a>
                     </li>
                     <li class="nav-item" id="aboutLink">
-                        <a class="nav-link" onclick="moveToElement('about')">
+                        <a class="nav-link" onclick="moveToElement('about'); reloadAnimations('about');">
                             <i class="fas fa-id-card"></i>
                             <span class="nav-value">
                                 About Me
@@ -61,7 +61,7 @@
                         </a>
                     </li>
                     <li class="nav-item" id="workexcertLink">
-                        <a class="nav-link" onclick="moveToElement('workexcert')">
+                        <a class="nav-link" onclick="moveToElement('workexcert'); reloadAnimations('workexcert');">
                             <i class="fas fa-desktop"></i>
                             <span class="nav-value">
                                 Work Experience & Certifications
@@ -69,7 +69,7 @@
                         </a>
                     </li>
                     <li class="nav-item" id="acadProjectsLink">
-                        <a class="nav-link" onclick="moveToElement('acadProjects')">
+                        <a class="nav-link" onclick="moveToElement('acadProjects'); reloadAnimations('acadProjects');">
                             <i class="fas fa-book"></i>
                             <span class="nav-value">
                                 Academics & Projects
@@ -77,7 +77,7 @@
                         </a>
                     </li>
                     <li class="nav-item" id="tooltechLink">
-                        <a class="nav-link" onclick="moveToElement('tooltech')">
+                        <a class="nav-link" onclick="moveToElement('tooltech'); reloadAnimations('tooltech');">
                             <i class="fas fa-toolbox"></i>
                             <span class="nav-value">
                                 Tools & Technologies
@@ -85,7 +85,7 @@
                         </a>
                     </li>
                     <li class="nav-item" id="contactLink">
-                        <a class="nav-link" onclick="moveToElement('contact')">
+                        <a class="nav-link" onclick="moveToElement('contact'); reloadAnimations('contact');">
                             <i class="fas fa-address-book"></i>
                             <span class="nav-value">
                                 Contact Me
