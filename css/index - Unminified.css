@@ -515,7 +515,7 @@ hr {
 }
 
 .slideUp {
-    animation: slide-up 1.5s forwards;
+    animation: slide-up 2s forwards;
 }
 
 @keyframes slide-up {
