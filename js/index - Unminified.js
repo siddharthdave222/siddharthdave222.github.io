@@ -159,7 +159,7 @@ function checkNullUndefinedOrEmpty(value) {
 }
 
 function reloadAnimations(elementName) {
-    switch (elementId) {
+    switch (elementName) {
         case "tooltech": {
             createSkillBar();
             break;
