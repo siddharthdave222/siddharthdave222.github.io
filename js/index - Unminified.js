@@ -3,6 +3,8 @@
 //})
 
 var toolDiv = $("#toolwrap");
+var workexDiv = $("#workexcertwrap");
+var acadDiv = $("#acadwrap");
 var typeWriterIntroDiv = $("#typeWriterIntro");
 var introDivCounter = 0;
 var introWordCounter = 0;
@@ -115,9 +117,29 @@ $(document).ready(function () {
     });
 });
 
+function slideUp(divObject) {
+    headerDivObjects = divObject.find(".header-text");
+    buttonObjects = divObject.find(".btn-tabs");
+
+    if (headerDivObjects.hasClass("slideUp") == false) {
+        headerDivObjects.addClass("slideUp");
+    }
+    if (buttonObjects.hasClass("slideUp") == false) {
+        buttonObjects.addClass("slideUp");
+    }
+}
+
 
 toolDiv.mouseenter(function () {
     createSkillBar();
+});
+
+workexDiv.mouseenter(function () {
+    slideUp(workexDiv);
+});
+
+acadDiv.mouseenter(function () {
+    slideUp(acadDiv);
 });
 
 $(".intro").mouseenter(function () {
