@@ -166,11 +166,25 @@ function moveToElement(goToElementName) {
     $('html, body').animate({ scrollTop: offset }, 1000);
     $("#navbarSupportedContent").children().find('.active').removeClass('active');
     $(elementId).addClass('active');
-    if (elementId == "#tooltech") {
-        createSkillBar();
-    }
-    else if (elementId == "#home") {
-        reanimateApparition();
+
+    switch (elementId) {
+        case "#tooltech": {
+            createSkillBar();
+            break;
+        }
+        case "#home": {
+            reanimateApparition();
+            break;
+        }
+        case "#workexcert": {
+            slideUp(workexDiv);
+            break;
+        }
+        case "#acadProjects": {
+            slideUp(workexDiv);
+            slideUp(acadDiv);
+            break;
+        }
     }
     return false;
 };
