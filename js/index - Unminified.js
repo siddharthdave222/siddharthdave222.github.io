@@ -114,6 +114,12 @@ $(document).ready(function () {
         typeWriter();
         updateProgressBar();
         fillIntroBar();
+        if (isElementInView(workexDiv)) {
+            slideUp(workexDiv);
+        }
+        if (isElementInView(acadDiv)) {
+            slideUp(acadDiv);
+        }
     });
 });
 
@@ -129,17 +135,12 @@ function slideUp(divObject) {
     }
 }
 
+function isElementInView(elem) {
+    return ($(window).scrollTop() + $(window).height() >= elem.offset().top);
+}
 
 toolDiv.mouseenter(function () {
     createSkillBar();
-});
-
-workexDiv.mouseenter(function () {
-    slideUp(workexDiv);
-});
-
-acadDiv.mouseenter(function () {
-    slideUp(acadDiv);
 });
 
 $(".intro").mouseenter(function () {
@@ -244,7 +245,13 @@ function isNavBarOpen() {
     }
 }
 
-document.addEventListener('scroll', function () {
+$(window).scroll(function () {
+    if (isElementInView(workexDiv)) {
+        slideUp(workexDiv);
+    }
+    if (isElementInView(acadDiv)) {
+        slideUp(acadDiv);
+    }
     checkReturnToTop();
     isNavBarOpen();
     updateProgressBar();
