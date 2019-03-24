@@ -156,6 +156,7 @@ hr {
         padding-right: 0;
         min-height: 440px;
         height: 440px;
+        background: rgba(255, 255, 255, 0.5);
     }
 
     #testimonialwrap .carousel-inner {
@@ -176,14 +177,34 @@ hr {
 
         #testimonialwrap .carousel-item.active {
             display: block;
-            transition: transform 0s ease-in-out;
+            animation: slide-in 1s linear;
         }
 
     #testimonialwrap .carousel-item-next,
     .carousel-item-prev {
-        display: block;
-        transition: transform 1s ease-in-out;
+        animation: slide-out 1s linear;
     }
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
 .carousel-content {
     display: flex;
